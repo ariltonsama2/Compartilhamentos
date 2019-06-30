@@ -6,10 +6,10 @@ pip install -r requirements.txt
 #Criar o banco de dados:
 python manage.py migrate
 
-#Indexar as pastas estaticas
+#Indexar as pastas estaticas:
 python manage.py collectstatic
 
-#Rodar Servidor
+#Rodar Servidor:
 python manage.py runserver
 
 #Acessar com:
