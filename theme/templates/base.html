@@ -1,0 +1,380 @@
+{% load static %}
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+        
+		
+		
+        <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>	
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+        <link rel="icon" href="./img/favicon.ico" type="image/x-icon" sizes="16x16">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
+		<script src="static/js/particles.js"></script>
+		<script src="static/js/app.js"></script>
+       
+       <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		
+		
+	</head>
+	<body>
+		<div id="particles-js" style="position: fixed;"></div>
+			
+				{% block content1 %}
+				{% endblock %}
+	
+			
+		
+		
+			<div class="container">
+				<div class="row linhaTitulo d-flex  align-items-center">			
+					<div class="col-12 col-md-6 img-titulo">
+						<img src="/static/logo.png" width="100%">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 menu-inicial">
+						<ul class="nav nav-tabs nav nav-bg">
+							<li class="nav-item">
+								<a class="nav-link active" id="menuprimeiro" href="javascript:trocadisponiveis();">Jogos Disponíveis</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="menuterceiro" href="javascript:trocafaq();">F.A.Q.</a>
+							</li>
+							<button class="btn  btn-primary" type="button" onclick="cadastrarJogo()" style="margin-left: auto;display: flex;border-radius: 0px 5px 0px 0px;"> Cadastrar Jogo </button>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-12 jogos" id="faq" >
+						<div class="col-12 text-center d-flex justify-content-center titulo faqtitulo" style="margin-top: 50px;">
+							<h3>F.A.Q.</h3>
+						</div>
+						<p class="paragrafo-inicial text-justify">
+							<strong>ATENÇÃO:</strong> Ao ver o nome de usuario do ofertante da conta, é interessante observar se ele está no seu grupo de confiança de compras antes de fazer a negociação. Não recomentamos de forma alguma a negociação com vendedores do Mercado Livre que vendem contas em grande quantidade. Essas contas em geral tendem a parar de funcionar depois de um tempo e raramente eles se mostram dispostos a devolver o dinheiro ou fazer algo sobre o assunto.</p>
+						<p class="paragrafo-inicial text-justify">
+							As contas no Playstation 4 funcionam de forma diferente das do Playstation 3. No PS4 existem 3 tipos de contas:<br><br>
+							<strong>OR1: </strong> Conta original 1, também conhecida como conta primária. Ao criar um usuario no seu aparelho e logar com essa conta, você <strong> deve </strong> colocar o seu PS4 como o principal dessa conta. Isso pode ser feito diretamente no login ou nas configurações do usuario. <br><br>
+							Tendo definido a seu PS4 como o primario desta conta, todos os jogos dela se tornam disponiveis para que qualquer outra conta no console jogue sem cadeado. Ou seja, você pode logar na sua propria conta com seu nome de usuario e jogar o jogo nela, ganhando trofeus na sua propria conta.<br> <br>Você nunca mais precisa acessar a conta OR1 comprada a não ser para baixar o jogo ou desmarcar seu PS4 como principal da conta em caso de venda. 
+							<br><br>
+							<strong>OR2: </strong> Conta original 2, também conhecida como conta secundária. Ao crir um usuario no seu aparelho e logar com essa conta, você <strong>não</strong> deve marcar seu PS4 como o principal desta conta. A conta OR2 não te dá o direito de fazer isto. <br><br>
+							Toda vez que quiser jogar o jogo comprado, você precisa acessar a conta comprada e abrir o jogo por ela. Para as outras contas, o jogo vai ficar bloqueado. Trofeus só podem ser ganhos na conta comprada e não na sua conta principal. <br><br>
+							Existem <strong>alguns jogos</strong> que podem ser jogados na sua conta principal mesmo que você tenha comprado uma conta OR2. O processo é feito logando na conta OR2, abrindo o jogo e, logo em seguida, segurando o botão PS do controle escolhendo a opção de trocar usuario e selecionando sua conta primaria (com seu nome de usuario). Isso não funciona para todos os jogos sendo que a grande maioria te impede de controlar qualquer coisa no jogo caso a conta seja trocada. Mais abaixo deixamos uma lista dos jogos onde é possivel e não é possivel fazer isso.<br><br>
+							<strong>FNT: </strong> Conta fantasma. Essa conta é a mair barata de todas. Nela, você não tem acesso ao jogo permanentemente e nem pode entrar na internet. <br><br>Ao comprar essa conta, você vai logar no seu PS4 e selecionar ele como o principal da conta. Ao acabar de baixar o jogo, você deve avisar ao vendedor e então retirar seu PS4 totalmente da internet. O vendedor vai forçadamente retirar a conta do seu PS4 pelo site da PSN. Como seu PS4 está offline, ele não sabe que isso aconteceu, o que significa que, até você entrar novamente na internet, seu aparelho acredita que a conta FNT que você logou é na realidade uma OR1 e vai liberar o acesso para todas as outras contas. Assim que você entrar na internet novamente o acesso ao jogo é perdido! <br>
+						</p>
+						<p class="paragrafo-inicial text-justify">
+							<strong>JOGOS OR2 QUE FUNCIONAM NA SUA CONTA PRINCIPAL</strong>
+							<br><br>
+							A lista de jogos abaixo foi feita com base em testes de usuarios de diversos foruns. Não nos responsabilizamos pelo metodo funcionar ou não para você. Se acha que algum jogo não deveria constar na lista ou deseja sugerir um novo jogo, basta entrar em contato pelo formulario mais abaixo. 
+						</p>
+						<br><br>
+							<div id="bootstrap-toggle" class="toggle-panel accordionStyles tab-content" style="margin: 00px 50px 50px 50px;">
+								<div class="card card-toggle">
+										<div class="card-header wallpaper-set" role="tab" id="headingOne">
+											<a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-core="" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1">
+												<h4 class="mbr-fonts-style display-5 toggle-font toggle-title text-uppercase card-font-style">FUNCIONAM</h4>
+											</a>
+										</div>
+									<div id="collapse1_0" class="panel-collapse noScroll collapse panelbgcolor" role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body p-4">
+											<ul>
+												<li>Batman: The Telltale Series (não ganha troféus)</li>
+												<li>Banner</li>
+												<li>Borderlands Handsome Edition</li>
+												<li>Call of Duty Advanced Warfare</li>
+												<li>Call of Duty Ghosts</li>
+												<li>DEADPOOL (não ganha troféus)</li>
+												<li>DIABLO 3</li>
+												<li>Dragon Ball Fighterz</li>
+												<li>Far Cry 4 </li>
+												<li>FIFA 14</li>
+												<li>FIFA 15</li>
+												<li>FIFA 16</li>
+												<li>FIFA 17</li>
+												<li>Games of Thrones Telltale (não ganha troféus)</li>
+												<li>GTA 5 (online pode não funcionar corretamente</li>
+												<li>Infinity Runner (não ganha troféus)</li>
+												<li>Injustice: Gods Among Us</li>
+												<li>Injustice 2</li>
+												<li>Killzone Shadow Fall</li>
+												<li>Kung Fury: Street Rage (não ganha troféus)</li>
+												<li>Lego Batman 3</li>
+												<li>Lego Jurassic World</li>
+												<li>Lego Marvel Super Heroes</li>
+												<li>Lego The Hobbit</li>
+												<li>Mantis Burn Racing </li>
+												<li>Mortal Kombat X</li>
+												<li>Monster Jam Crush It</li>
+												<li>NARUTO SHIPPUDEN: Ultimate Ninja Storm 4 (não ganha troféus)</li>
+												<li>NFL 15</li>
+												<li>NFL 16</li>
+												<li>Overwatch</li>
+												<li>Power Rangers: Mega Battle (não ganha troféus)</li>
+												<li>Peggle 2</li>
+												<li>Resident Evil Remaster (somente alguns jogos da coletanea)</li>
+												<li>Rock band 4</li>
+												<li>SkyScrappers (europeu)</li>
+												<li>Square Heroes</li>
+												<li>Strider</li>
+												<li>Tales From The Borderlands (não ganha troféus)</li>
+												<li>The Amazing Spider-Man 2</li>
+												<li>The Last Tinker (não ganha troféus)</li>
+												<li>The Wolf Among Us (não ganha troféus)</li>
+												<li>Tomb Raider And the Temple of Osiris</li>
+												<li>Trials Fusion</li>
+												<li>UFC</li>
+												<li>Ultimate Marvel vs Capcom 3</li>
+												<li>Zombie Vikings</li>
+											</ul>		  
+											<p></p>
+										</div>
+									</div>
+								</div>
+								<div class="card card-toggle">
+									<div class="card-header wallpaper-set" role="tab" id="headingTwo">
+										<a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-core="" href="#collapse2_0" aria-expanded="false" aria-controls="collapse2">
+											<h4 class="mbr-fonts-style display-5 toggle-font toggle-title text-uppercase card-font-style">NÃO FUNCIONAM</h4>
+										</a>
+									</div>
+									<div id="collapse2_0" class="panel-collapse noScroll collapse panelbgcolor" role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body p-4">									
+											<ul>
+												<li>Adventure Time</li>
+												<li>Arcade Collection</li>
+												<li>Assassin's Creed Syndicate</li>
+												<li>Bastion</li>
+												<li>Battlefield 1</li>
+												<li>Cavaleiros do Zodiaco: Alda dos Soldados</li>
+												<li>Call of Duty Black Ops 3</li>
+												<li>Croileux</li>
+												<li>Dark Souls 2</li>
+												<li>Darkest Dungeon</li>
+												<li>Disgaea 5</li>
+												<li>Dishonored 2</li>
+												<li>Dragon Quest Heroes</li>
+												<li>Dragon Age: Inquisition</li>
+												<li>Everybody's Gone to the Rapture</li>
+												<li>F1 2015</li>
+												<li>Fallout 4</li>
+												<li>Far Cry Primal</li>
+												<li>Final Fantaxy XV</li>
+												<li>Ghost Recon: Wildlands</li>
+												<li>God Eater Resurrection</li>
+												<li>God of War Remaster Collection</li>
+												<li>Gravity Rush Remastered</li>
+												<li>Horizon Zero Dawn</li>
+												<li>Infamous: Second Son</li>
+												<li>Just Cause 3</li>
+												<li>Just Dance 2014</li>
+												<li>Just Dance 2015</li>
+												<li>King of Fighters xiv</li>
+												<li>Life is Strange</li>
+												<li>LittleBigPlanet 3</li>
+												<li>Lords of the fallen</li>
+												<li>Mad Max</li>
+												<li>Mafia 3 </li>
+												<li>Metal Gear 5: The Phantom Pain</li>
+												<li>Middle-earth: Shadow of Mordor</li>
+												<li>Mighty No. 9</li>
+												<li>MotoGp 2015</li>
+												<li>Monster Hunter World</li>
+												<li>MX vs. ATV Supercross</li>
+												<li>NBA 2K15</li>
+												<li>NBA 2K17</li>
+												<li>Need for Speed 2015</li>
+												<li>Need for Speed Rivals</li>
+												<li>PES 2015</li>
+												<li>PES 2016</li>
+												<li>Phantom Breaker Overdrive</li>
+												<li>Project CARS</li>
+												<li>Pure Pool</li>
+												<li>Resident Evil 5</li>
+												<li>Resident Evil Revelations 2</li>
+												<li>RIDE</li>
+												<li>Riptide GP2</li>
+												<li>South Park the Stick of Fruth</li>
+												<li>Star Ocean</li>
+												<li>Star Wars Battlefront</li>
+												<li>South Park: The Stick of Truth</li>
+												<li>Stealth Inc 2: A game of Clones</li>
+												<li>Street Fighter V</li>
+												<li>Styx: Master of Shadows</li>
+												<li>Sword Art Online: hollow fragment</li>
+												<li>Sword Art Online: hollow realization</li>
+												<li>Tales From The Borderlands</li>
+												<li>Tales Zestiria</li>
+												<li>Tearaway Unfolded</li>
+												<li>Tony Hawk Pro 5</li>
+												<li>The Division</li>
+												<li>The Evil Within</li>
+												<li>The Legend of Korra</li>
+												<li>The Order 1886</li>
+												<li>The Walking Dead Season 1 e 2</li>
+												<li>The Wichter 3</li>
+												<li>The Wolf Among Us</li>
+												<li>TheCrew</li>
+												<li>The Last of Us Remastered</li>
+												<li>Tomb Raider Definitive Edition</li>
+												<li>Toren</li>
+												<li>Toro</li>
+												<li>Toukiden Kiwami</li>
+												<li>Ultra Street Fighter 4</li>
+												<li>Uncharted 4</li>
+												<li>Uncharted the Natham Drake Collection</li>
+												<li>Unravel</li>
+												<li>Until Dawn</li>
+												<li>Volume</li>
+												<li>Wolfenstein: The New Order</li>
+												<li>Wolfenstein: The old Blood</li>
+												<li>WRC 5</li>
+												<li>Yu-Gi-Oh Legacy of the Duelist</li>
+												<li>Zotrix</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 text-center d-flex justify-content-center titulo faqtitulo">
+								<h3>CONTATO</h3>
+							</div>
+							<section class="mb-4 form-size">
+								<div class="row">
+									<div class="col-12">
+										<form id="contact-form" name="contact-form" action="https://formspree.io/arilton.aguilar@outlook.com" method="POST">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="md-form mb-0">
+														<label for="name" class="">Seu Usuario</label>
+														<input type="text" id="name" name="name" class="form-control input-dark">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="md-form mb-0">
+														<label for="email" class="">Seu Email</label>
+														<input type="text" id="email" name="email" class="form-control input-dark">
+													</div>
+												</div> 
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="md-form mb-0">
+														<label for="subject" class="">Assunto</label>
+														<input type="text" id="subject" name="subject" class="form-control input-dark">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="md-form">
+														<label for="message">Sua Mensagem</label>
+														<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea input-dark"></textarea>
+													</div>
+												</div>
+											</div>
+										</form>	
+										<div class="text-center text-md-right">
+											<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" style="color: white; font-weight: bold;">Enviar</a>
+										</div>
+										<div class="status"></div>
+									</div>
+								</div>
+							</section>
+							<hr class="linha-divisoria">
+							<div class="row justify-content-center"> 
+								<div class="col-12 text-center pb-3">
+									<span><small> Template feito por <a href="http://bigbearestudios.com/">BigBear Estúdios</a></small></span>
+								</div>
+							</div>
+						</div>
+				
+				
+				
+				
+				<div id="disponiveis" class="col-12 jogos">
+				
+	<p class="paragrafo-inicial text-justify">
+		Esse site por si só não oferece nenhuma conta para venda. Ele simplesmente atua como um site de classificados, permitindo que as partes interessadas possam entrar em contato uma com a outra. As ofertas aqui listadas são puramente responsabilidade dos usuários. Não nos responsabilizamos por qualquer fraude ou furto por parte dos ofertantes e compradores. Também não nos responsabilizamos pelo banimento de contas ou consoles envolvidos nas transações. Esse site não armazena nem solicita nenhum dado bancário.
+	</p>
+	<p class="paragrafo-inicial text-justify">
+		<strong>OR1: </strong> Conta original 1, também conhecida como conta primária. <br>
+		<strong>OR2: </strong> Conta original 2, também conhecida como conta secundária. <br>
+		<strong>FNT: </strong> Conta fantasma.<br>
+	</p>
+	<p class="paragrafo-inicial text-justify"> 
+		Todos os jogos ofertados tratam-se de contas de jogo com usuário e senha. Jogos físicos ou códigos para resgate não são ofertados.
+	</p>
+	<p class="paragrafo-inicial text-justify">
+		Para mais informações e ver uma lista de jogos OR2 que funcionam em sua conta primária, acesse a aba <a href="javascript:trocafaq();">F.A.Q.</a>
+	</p>
+	<br>
+			<hr class="linha-divisoria">
+				{% block content %}
+				{% endblock %}
+			<hr class="linha-divisoria">
+				<div class="row justify-content-center"> 
+						<div class="col-12 text-center pb-3">
+							<span> <small> Template feito por <a href="http://bigbearestudios.com/">BigBear Estúdios</a> </small></span>
+						</div>
+				</div>
+			</div>
+		</div>
+		</div>
+			
+	<script>
+	function paginaInicial() {
+		window.location.href = "{% url 'Games_fbv:Game_list' %}";
+	}
+	
+	function cadastrarJogo() {
+		window.location.href = "{% url 'Games_fbv:Game_new' %}";
+	
+	}
+	function trocafaq(){
+		document.getElementById("faq").style.display = "block";
+			document.getElementById("disponiveis").style.display = "none";
+			var element = document.getElementById("menuprimeiro");
+			element.className = element.className.replace(/\bactive\b/g, "");
+			
+			 var element, name, arr;
+			  element = document.getElementById("menuterceiro");
+			  name = "active";
+			  arr = element.className.split(" ");
+			  if (arr.indexOf(name) == -1) {
+				element.className += " " + name;
+			  }
+	}
+	function trocadisponiveis(){
+		document.getElementById("faq").style.display = "none";
+			document.getElementById("disponiveis").style.display = "block";
+			var element = document.getElementById("menuterceiro");
+			element.className = element.className.replace(/\bactive\b/g, "");
+			var element, name, arr;
+			  element = document.getElementById("menuprimeiro");
+			  name = "active";
+			  arr = element.className.split(" ");
+			  if (arr.indexOf(name) == -1) {
+				element.className += " " + name;
+			  }
+	}
+	function openFormCadastroJogo() {
+$('body').addClass('stop-scrolling')
+
+  document.getElementById("myFormCadastroJogo").style.display = "block";
+}
+
+function closeFormCadastroJogo() {
+$('body').removeClass('stop-scrolling')
+
+  document.getElementById("myFormCadastroJogo").style.display = "none";
+}
+	</script>
+	</body>
+</html>

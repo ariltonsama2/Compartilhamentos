@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+
+<div class="col-12 form-popup align-middle " id="myFormCadastroJogo" style="display:block"> 
+
+
+<form class="form-container text-center form-container-cadastro-jogo" method="post">{% csrf_token %}
+<h1>Deletar Jogo</h1>	
+		{{ form.as_p }}
+	
+    <button type="submit" class="btn btn-primary">Deletar</button>
+	<button type="button" class="btn  btn-form cancel" onclick="paginaInicial()">Voltar</button>
+</form>
+</div>
+
+{% endblock %}
+

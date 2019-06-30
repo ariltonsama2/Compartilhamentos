@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container-fluid">
+	
+			{% for Game in object_list %}
+			<div class="row game-row">
+			
+			<div class="col-12 col-sm-6 col-md-6 col-xl-3 game-item-colorido game-item-colorido-low-resolution d-flex align-items-center" style="text-transform:uppercase;">
+			{{ Game.name }}
+			</div>
+			<div class="col-4 col-sm-2 col-md-2 col-xl-2 text-center">
+			<small> OR1 </small> <br>
+			{%if Game.originalum == 0 %}
+				--
+			{% else %}
+				R${{Game.originalum}}
+			{% endif %}
+			</div>
+			
+			<div class="col-4 col-sm-2 col-md-2 col-xl-2 text-center">
+			<small> OR2 </small> <br>
+			{%if Game.originaldois == 0 %}
+				--
+			{% else %}
+				R${{Game.originaldois}}
+			{% endif %}
+			</div>
+			
+			<div class="col-4 col-sm-2 col-md-2 col-xl-2 text-center">
+			<small> FTN </small> <br>
+			{%if Game.fantasma == 0 %}
+				--
+			{% else %}
+				R${{Game.fantasma}}
+			{% endif %}
+			</div>
+			<div class="col-6 col-sm-6 col-md-6 col-xl-2 align-items-center d-flex text-center" style="
+    padding: 0px;
+    
+">
+			<a class="botoes-lista " href="{% url 'Games_fbv:Game_delete' Game.id %}">
+			<button  class="btn botao-linha primeira-coluna" type="button" style="
+    border-right: 2px;
+    
+    border-style: dashed;"> Excluir </button ></a>
+	
+	
+	<a  class="botoes-lista"  href="{% url 'Games_fbv:Game_edit' Game.id %}" style="width:100%;">
+			<button  class="btn botao-linha" type="button" style="
+    border-right: 2px;
+    border-radius: 0px;
+    border-style: dashed;"> Editar </button ></a>
+			</div>
+
+			<div class="col-6 col-sm-6 col-md-6 col-xl-1 ultima-coluna" style="
+    left: -1px;
+">
+			
+	<a  class="botoes-lista"  href="https://api.whatsapp.com/send?phone={{Game.contato}}" style="width:100%;">
+			
+			<button  class="btn botao-linha" type="button" style="
+    left: 0px;
+    position: relative;
+    left: 1px;"> Contato </button > </a>
+			</div>
+			
+			</div>
+			<!-- <li>{{ Game.name }}  ({{ Game.contato }} Pages) -->
+			<!-- <a href="{% url 'Games_fbv:Game_edit' Game.id %}">edit</a> -->
+			<!-- <a href="{% url 'Games_fbv:Game_delete' Game.id %}">delete</a> -->
+			<!-- </li> -->
+			{% endfor %}
+		</ul>
+	</div>
+
+
+
+{% endblock %}
