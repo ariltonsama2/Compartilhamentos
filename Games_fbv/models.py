@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
-
+#Model para o Form Game
 class Game(models.Model):
     name = models.CharField(max_length=200)
     contato = models.CharField(max_length=50)

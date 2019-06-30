@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from django import forms
 from Games_fbv.models import Game
 
+#Form de cadastro de jogo
 class GameForm(ModelForm):
     class Meta:
         model = Game
@@ -12,14 +13,14 @@ class GameForm(ModelForm):
             "originaldois": "Original Dois",
             "fantasma": "Fantasma",
         }
+    # Validação
     def is_valid(self):
         
-        # run the parent validation first
         valid = super(GameForm, self).is_valid()
         
         if not valid:
             return valid
-        
+        #Valida se contato é um numero valido (não possui letras)
         contato = self.cleaned_data['contato']
         try: 
             int(contato)
@@ -33,7 +34,7 @@ class GameForm(ModelForm):
             
         
     
- 
+ #Form de edição de jogo
 class GameFormEdit(ModelForm):
     class Meta:
         model = Game
@@ -43,14 +44,14 @@ class GameFormEdit(ModelForm):
             "originaldois": "Original Dois",
             "fantasma": "Fantasma",
         }
+    #Validação
     def is_valid(self,aux):
         
-        # run the parent validation first
         valid = super(GameFormEdit, self).is_valid()
         
         if not valid:
             return valid
-        
+        #Validação da senha
         if (self.cleaned_data['senha'] != aux):
             self.add_error('senha', 'Senha incorreta')
             return False
@@ -68,7 +69,7 @@ class GameFormEdit(ModelForm):
         
         return True
   
- 
+#Form de deletar jogo 
 class GameFormDelete(ModelForm):
     class Meta:
         model = Game
@@ -76,12 +77,11 @@ class GameFormDelete(ModelForm):
         
     def is_valid(self,aux):
         
-        # run the parent validation first
         valid = super(GameFormDelete, self).is_valid()
         
         if not valid:
             return valid
-        
+        #Validação da senha
         if (self.cleaned_data['senha'] != aux):
             self.add_error('senha', 'Senha incorreta')
             return False    
